@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="650.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ru.atc.uss.app.controllers.ServiceManagerController">
+    <children>
+        <Label layoutX="14.0" layoutY="14.0" opacity="0.5" text="Изменение услуг">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Label>
+        <TextField fx:id="txtfBan" layoutX="12.0" layoutY="107.0" />
+        <Label layoutX="14.0" layoutY="90.0" text="Ban" />
+        <Label layoutX="14.0" layoutY="139.0" text="Ctn" />
+        <TextField fx:id="txtfCtn" layoutX="12.0" layoutY="156.0" />
+        <Label layoutX="14.0" layoutY="188.0" text="Soc" />
+        <TextField fx:id="txtfSoc" layoutX="12.0" layoutY="205.0" />
+        <Button fx:id="btnChange" layoutX="12.0" layoutY="244.0" mnemonicParsing="false" onAction="#changeSerivce" prefHeight="25.0" prefWidth="149.0" text="Выполнить" />
+        <Separator layoutX="14.0" layoutY="280.0" prefHeight="1.0" prefWidth="617.0" />
+        <TextArea fx:id="txtaResult" editable="false" layoutX="14.0" layoutY="294.0" prefHeight="305.0" prefWidth="617.0" wrapText="true">
+            <font>
+                <Font name="Times New Roman" size="14.0" />
+            </font></TextArea>
+        <ProgressIndicator fx:id="piIndicator" layoutX="557.0" layoutY="21.0" opacity="0.5" progress="0.0" />
+      <RadioButton fx:id="rbAdd" layoutX="14.0" layoutY="63.0" mnemonicParsing="false" selected="true" text="Подключить">
+         <toggleGroup>
+            <ToggleGroup fx:id="inclusionType" />
+         </toggleGroup></RadioButton>
+      <RadioButton fx:id="rbDelete" layoutX="114.0" layoutY="63.0" mnemonicParsing="false" text="Отключить" toggleGroup="$inclusionType" />
+    </children>
+</AnchorPane>

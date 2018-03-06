@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+
+<AnchorPane fx:id="apForm" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="650.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ru.atc.uss.app.controllers.SubscriberCreatorController">
+   <children>
+      <Label layoutX="14.0" layoutY="14.0" opacity="0.5" text="Создание абонента">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <RadioButton fx:id="rbB2c" layoutX="14.0" layoutY="63.0" mnemonicParsing="false" selected="true" text="B2C">
+         <toggleGroup>
+            <ToggleGroup fx:id="subscriberType" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="rbB2b" layoutX="65.0" layoutY="63.0" mnemonicParsing="false" text="B2B" toggleGroup="$subscriberType" />
+      <TextField fx:id="txtfBenCount" layoutX="12.0" layoutY="107.0" />
+      <Label layoutX="14.0" layoutY="90.0" text="Количество BEN" />
+      <Label layoutX="14.0" layoutY="139.0" text="Количество CTN" />
+      <TextField fx:id="txtfCtnCount" layoutX="12.0" layoutY="156.0" />
+      <TextField fx:id="txtfSubscriberCount" layoutX="12.0" layoutY="205.0" />
+      <Label layoutX="12.0" layoutY="188.0" text="Количество абонентов" />
+      <Label layoutX="226.0" layoutY="90.0" text="Market code" />
+      <TextField fx:id="txtfMarketCode" layoutX="225.0" layoutY="107.0" />
+      <Label layoutX="227.0" layoutY="139.0" text="NGP" />
+      <TextField fx:id="txtfNgp" layoutX="225.0" layoutY="156.0" />
+      <Label layoutX="227.0" layoutY="188.0" text="Account type" />
+      <TextField fx:id="txtfAccountType" layoutX="225.0" layoutY="205.0" />
+      <Label layoutX="437.0" layoutY="90.0" text="Тарифный план" />
+      <TextField fx:id="txtfPricePlan" layoutX="437.0" layoutY="107.0" />
+      <Button fx:id="btnCreate" layoutX="12.0" layoutY="327.0" mnemonicParsing="false" onAction="#createSubscriber" prefHeight="25.0" prefWidth="149.0" text="Создать" />
+      <Separator layoutX="14.0" layoutY="362.0" prefHeight="1.0" prefWidth="617.0" />
+      <TextArea fx:id="txtaResult" editable="false" layoutX="14.0" layoutY="375.0" prefHeight="224.0" prefWidth="617.0" wrapText="true">
+         <font>
+            <Font name="Times New Roman" size="14.0" />
+         </font></TextArea>
+      <Label layoutX="437.0" layoutY="139.0" text="ИНН" />
+      <TextField fx:id="txtfInn" layoutX="437.0" layoutY="156.0" />
+      <CheckBox fx:id="cbCreateToComverse" layoutX="12.0" layoutY="248.0" mnemonicParsing="false" onAction="#changeValueCbCreateToComverse" text="Создать абонента в Comverse" />
+      <Separator layoutX="12.0" layoutY="239.0" prefHeight="1.0" prefWidth="617.0" />
+      <TextField fx:id="txtfComverseBalance" disable="true" layoutX="12.0" layoutY="288.0" />
+      <TextField fx:id="txtfComverseOfferName" disable="true" layoutX="223.0" layoutY="288.0" />
+      <Label layoutX="14.0" layoutY="271.0" text="Баланс" />
+      <Label layoutX="225.0" layoutY="271.0" text="Offer name" />
+      <ProgressIndicator fx:id="piIndicator" layoutX="557.0" layoutY="21.0" opacity="0.5" progress="0.0" />
+      <TextField fx:id="txtfBan" layoutX="437.0" layoutY="205.0" />
+      <Label layoutX="437.0" layoutY="188.0" text="Ban" />
+      <CheckBox fx:id="cbCreateNewBan" layoutX="437.0" layoutY="63.0" mnemonicParsing="false" onAction="#changeValueCbCreateNewBan" text="Создать новый ban" />
+   </children>
+</AnchorPane>
